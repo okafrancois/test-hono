@@ -1,0 +1,150 @@
+// Variables
+@import "variables";
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img{
+  width: auto;
+  height: auto;
+}
+
+body {
+  font-family: degular,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  height: 100vh;
+  background: $dark-blue;
+
+  .frame {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 25vw;
+  }
+
+  .start-1 {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    height: 10vw;
+  }
+
+  .container {
+    min-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.logo {
+  margin-bottom: 3rem;
+  height: 50px;
+}
+
+
+.title {
+  max-width: 530px;
+  margin-bottom: 3rem;
+  position: relative;
+
+  h1{
+    font-family: degular-display,sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #b3cff9;
+    text-align: center;
+    font-size: 2.5rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  img{
+    position: absolute;
+    z-index: 1;
+  }
+
+  .start-2 {
+    top: -20px;
+    left: -35px;
+    height: 70px;
+  }
+
+  .start-3 {
+    bottom: 20px;
+    height: 50px;
+    right: -60px;
+  }
+}
+
+
+.action {
+  margin-top: 1rem;
+  min-width: 290px;
+  position: relative;
+
+  .link{
+    background: #d65d56;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  *{
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: $light-orange;
+    height: 50px;
+    padding: 1rem;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transform: translate(5px) rotate(-3deg);
+    transform-origin: bottom left;
+    position: relative;
+    z-index: 3;
+    top: -10px;
+  }
+
+  .ellipse {
+    position: absolute;
+    bottom: -45px;
+    left: -45px;
+    height: 85px;
+    z-index: 1;
+  }
+
+  &:hover{
+    a{
+      transform: translate(5px) rotate(-0.5deg) scale(1.1);
+    }
+
+    .ellipse {
+      bottom: -35px;
+      transform: translate(-60px) rotate(55deg);
+      transform-origin: bottom right;
+    }
+  }
+}
